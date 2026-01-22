@@ -1,0 +1,88 @@
+
+# 🏛 Project 1: Azure Data Platform (Fleet & Financial Reporting)
+
+## Governance
+
+* **Data Ownership:** Finance & Fleet Operations departments
+* **Data Classification:** Internal, sensitive financial & operational data
+* **Data Zones:** Raw → Curated → Analytics (Bronze/Silver/Gold)
+* **Data Lineage:** Tracked using Azure Purview (or metadata registry)
+* **Audit Logging:** All pipeline executions and transformations logged in Azure Monitor
+
+## Security
+
+* **Identity & Access Management:** Azure AD RBAC for developers, analysts, and admins
+* **Secret Management:** Azure Key Vault for credentials and connection strings
+* **Network Security:** Private endpoints for ADLS and Synapse; VPN or ExpressRoute for on-prem to cloud connectivity
+* **Data Encryption:** At-rest (ADLS Storage Service Encryption) and in-transit (TLS 1.2)
+* **Monitoring & Alerts:** Azure Monitor alerts for failures or unauthorized access attempts
+
+## Compliance
+
+* Aligns with **GDPR, POPIA, and internal financial data compliance** standards
+* Regular quarterly reviews of access permissions and audit logs
+
+---
+
+# 🏛 Project 2: SQL Server → Power BI Modernization
+
+## Governance
+
+* **Data Ownership:** Finance & Reporting teams
+* **Data Classification:** Internal reporting data
+* **Data Zones:** Raw (staging) → Curated (cleaned & transformed) → Analytics (Power BI datasets)
+* **Dataset Certification:** All Power BI datasets certified by data governance team
+* **Data Lineage:** Documented for ETL transformations, joins, and aggregations
+
+## Security
+
+* **Identity & Access Management:** Azure AD with RLS for Power BI dashboards
+* **Secret Management:** Key Vault for SQL Server and Synapse credentials
+* **Network Security:** Private endpoints and firewall rules for Synapse SQL pools
+* **Data Encryption:** Both in-transit and at-rest encryption enabled
+* **Monitoring & Alerts:** Pipeline runs monitored via Azure Monitor; Power BI refresh failures tracked
+
+## Compliance
+
+* Self-service analytics follows **internal approval workflows** for dataset certification
+* Quarterly audits of dataset usage, refresh logs, and access permissions
+
+---
+
+# 🏛 Project 3: Azure Incremental Data Pipeline (Streaming-Style)
+
+## Governance
+
+* **Data Ownership:** Mobility Operations & Business Analytics
+* **Data Classification:** Operational and near real-time mobility data
+* **Data Zones:** Raw → Curated → Analytics (near real-time dashboards)
+* **Incremental Ingestion Logs:** Maintained to track watermark values and processed records
+* **Data Lineage:** Documented for all incremental and deduplication steps
+
+## Security
+
+* **Identity & Access Management:** Azure AD RBAC for engineers and analysts
+* **Secret Management:** All pipeline credentials and connection strings stored in Key Vault
+* **Network Security:** Private endpoints, secure data transfer, VPN/ExpressRoute if required
+* **Data Encryption:** At-rest and in-transit encryption enforced
+* **Monitoring & Alerts:** Azure Monitor alerts for pipeline failures, incremental load errors, or anomalies
+
+## Compliance
+
+* Data access restricted based on operational roles
+* Routine checks on incremental load completeness and data quality
+* Compliance with internal mobility data policies and regulatory standards
+
+---
+
+# 📄 Shared Governance & Security Standards
+
+* **Periodic Reviews:** Access, secrets, and compliance audits every quarter
+* **Logging:** Centralized logs for all pipelines, transformations, and Power BI refreshes
+* **Incident Response:** Standard operating procedure in place for data breaches or unauthorized access
+* **Documentation:** All pipeline configurations, notebooks, and dashboards documented in GitHub
+* **Data Retention:** Aligned with internal and regulatory requirements for retention and deletion
+
+---
+
+This documentation ensures that **all three projects are enterprise-ready, secure, and compliant**, while maintaining transparency and auditability for stakeholders.
