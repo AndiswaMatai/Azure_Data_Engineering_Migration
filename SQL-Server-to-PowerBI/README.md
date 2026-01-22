@@ -1,31 +1,66 @@
-# SQL Server → Power BI Modernization
+# ⚡ Project 3: Azure Incremental Data Pipeline (Streaming‑Style)
 
-## Overview
-Cloud-native modernization of legacy SQL Server reporting using scalable Azure services.
+## 📌 README.md
 
-## Problem
-Manual extracts, slow refresh cycles, and limited scalability hindered enterprise reporting.
+### Overview
 
-## Solution
-- Automated pipelines with Azure Data Factory
-- Data transformation in Azure Databricks
-- Curated datasets in Azure Synapse
-- Interactive Power BI dashboards for business users
+High‑performance incremental ingestion pipeline for high‑volume mobility data using watermark‑based processing.
 
-## Impact
-- Reporting latency reduced from hours to minutes
-- Self-service analytics enabled across departments
-- Improved scalability and governance
+### Business Problem
 
-## Tech Stack
-- **Ingestion:** Azure Data Factory
-- **Transformation:** Azure Databricks, SQL
-- **Analytics:** Azure Synapse Analytics, Power BI
-- **Security & Governance:** Azure AD, Key Vault
+* Full reloads caused delays
+* High compute cost
+* No near real‑time visibility
 
-## Artifacts
-- 📊 [Dashboards](./dashboards/)
-- 📐 [Pipeline Diagrams](./diagrams/)
-- 📓 [Notebooks](./notebooks/)
-- 📄 [Documentation](./documentation/)
+### Solution Summary
+
+* ADF watermark‑based ingestion
+* Databricks deduplication & merge logic
+* Synapse analytics layer
+* Power BI operational dashboards
+
+### Business Impact
+
+* Pipeline runtime reduced by **70%**
+* Monthly compute costs reduced
+* Near real‑time operational insights
+
+---
+
+## 🏗️ Architecture Diagram (Description)
+
+**Flow:**
+Source → ADF (Watermark) → ADLS Raw → Databricks (Merge) → ADLS Curated → Synapse → Power BI
+
+---
+
+## 🔧 Incremental Logic
+
+* Maintain control table for last processed timestamp
+* Filter source data using watermark
+* MERGE INTO curated tables
+
+---
+
+## 📄 Monitoring & Governance
+
+* Pipeline success/failure logging
+* Cost‑efficient compute scaling
+* Data quality checks
+
+---
+
+# 📚 Shared Documentation
+
+## KPI Definitions
+
+* Fleet Utilization = Active Time / Available Time
+* Reporting Latency = Source to Dashboard SLA
+
+## Assumptions
+
+* Data refreshed daily or near real‑time
+* ZAR as reporting currency
+
+---
 
