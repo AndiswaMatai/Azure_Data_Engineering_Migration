@@ -1,0 +1,6 @@
+# Deduplicate based on watermark
+mobility_df = spark.read.parquet("abfss://mobility@datalake.dfs.core.windows.net/raw/mobility_data")
+
+incremental = mobility_df.filter(mobility_df.timestamp >= "2026-01-01")
+deduped = incremental.dropDuplicates(["trip_id"])
+deduped.write.mode("append").parquet("abfss://mobility@datalake.dfs.core.windows.net/curated/mobility_data")
