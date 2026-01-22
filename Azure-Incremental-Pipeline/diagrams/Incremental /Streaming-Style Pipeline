@@ -1,0 +1,10 @@
+flowchart LR
+    A[Mobility Source System] -->|Watermark| B[ADF Incremental Pipeline]
+    B --> C[ADLS Raw]
+    C --> D[Databricks MERGE]
+    D --> E[ADLS Curated]
+    E --> F[Synapse]
+    F --> G[Near Real-Time Power BI]
+
+Pattern: Incremental ingestion + deduplication
+Performance Gain: 70% faster
