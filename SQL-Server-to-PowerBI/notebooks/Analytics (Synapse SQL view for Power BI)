@@ -1,0 +1,8 @@
+CREATE OR ALTER VIEW vw_SalesPerformance AS
+SELECT 
+    Region,
+    SUM(Revenue) AS TotalRevenue,
+    SUM(Cost) AS TotalCost,
+    AVG(ProfitMargin) AS AvgProfitMargin
+FROM curated.sales_data
+GROUP BY Region;
