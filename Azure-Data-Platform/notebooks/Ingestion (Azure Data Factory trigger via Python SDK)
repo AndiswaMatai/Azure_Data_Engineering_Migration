@@ -1,0 +1,13 @@
+# Trigger an Azure Data Factory pipeline run
+from azure.identity import DefaultAzureCredential
+from azure.mgmt.datafactory import DataFactoryManagementClient
+
+subscription_id = "<your-subscription-id>"
+rg_name = "<your-resource-group>"
+df_name = "<your-data-factory-name>"
+pipeline_name = "FleetDataIngestion"
+
+client = DataFactoryManagementClient(DefaultAzureCredential(), subscription_id)
+
+run_response = client.pipelines.create_run(rg_name, df_name, pipeline_name)
+print(f"Pipeline run ID: {run_response.run_id}")
