@@ -1,0 +1,10 @@
+from pyspark.sql.functions import col
+
+df = spark.read.parquet("/mnt/raw/fleet")
+
+clean_df = (
+    df.filter(col("trip_status") == "COMPLETED")
+      .dropDuplicates(["trip_id"])
+)
+
+clean_df.write.mode("overwrite").parquet("/mnt/curated/fleet")
