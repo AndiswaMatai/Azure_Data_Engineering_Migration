@@ -1,0 +1,10 @@
+CREATE EXTERNAL TABLE dbo.fact_fleet (
+    trip_id STRING,
+    distance_km FLOAT,
+    revenue_zar DECIMAL(18,2)
+)
+WITH (
+    LOCATION = 'curated/fleet/',
+    DATA_SOURCE = AzureDataLake,
+    FILE_FORMAT = ParquetFormat
+);
