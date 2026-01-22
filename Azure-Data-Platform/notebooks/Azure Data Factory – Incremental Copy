@@ -1,0 +1,12 @@
+SELECT *
+FROM dbo.FleetTrips
+WHERE LastUpdatedDate > @WatermarkValue
+
+
+ADF Pipeline Logic
+
+Lookup → get last watermark
+
+Copy Activity → incremental extract
+
+Stored Procedure → update watermark table
