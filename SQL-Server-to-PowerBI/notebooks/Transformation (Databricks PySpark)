@@ -1,0 +1,7 @@
+# Transform sales data for Power BI
+sales_df = spark.read.format("jdbc").option("url", sql_connection["connectionString"]).option("dbtable", "Sales").load()
+
+# Add calculated column
+sales_df = sales_df.withColumn("ProfitMargin", (sales_df.Revenue - sales_df.Cost) / sales_df.Revenue)
+
+sales_df.write.mode("overwrite").parquet("abfss://sales@datalake.dfs.core.windows.net/curated/sales_data")
