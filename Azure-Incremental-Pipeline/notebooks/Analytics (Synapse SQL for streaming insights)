@@ -1,0 +1,8 @@
+-- Real-time mobility trips per region
+SELECT 
+    Region,
+    COUNT(DISTINCT trip_id) AS ActiveTrips,
+    AVG(DurationMinutes) AS AvgTripDuration
+FROM curated.mobility_data
+WHERE timestamp >= DATEADD(hour, -1, GETDATE())
+GROUP BY Region;
