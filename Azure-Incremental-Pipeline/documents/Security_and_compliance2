@@ -1,0 +1,26 @@
+
+# 🏛 Project 2: SQL Server → Power BI Modernization
+
+## Governance
+
+* **Data Ownership:** Finance & Reporting teams
+* **Data Classification:** Internal reporting data
+* **Data Zones:** Raw (staging) → Curated (cleaned & transformed) → Analytics (Power BI datasets)
+* **Dataset Certification:** All Power BI datasets certified by data governance team
+* **Data Lineage:** Documented for ETL transformations, joins, and aggregations
+
+## Security
+
+* **Identity & Access Management:** Azure AD with RLS for Power BI dashboards
+* **Secret Management:** Key Vault for SQL Server and Synapse credentials
+* **Network Security:** Private endpoints and firewall rules for Synapse SQL pools
+* **Data Encryption:** Both in-transit and at-rest encryption enabled
+* **Monitoring & Alerts:** Pipeline runs monitored via Azure Monitor; Power BI refresh failures tracked
+
+## Compliance
+
+* Self-service analytics follows **internal approval workflows** for dataset certification
+* Quarterly audits of dataset usage, refresh logs, and access permissions
+
+---
+
