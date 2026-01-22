@@ -1,0 +1,5 @@
+# Example linked service connection string
+sql_connection = {
+    "type": "AzureSqlDatabase",
+    "connectionString": "Server=tcp:<server>.database.windows.net;Database=<db>;Authentication=ActiveDirectoryMSI"
+}
