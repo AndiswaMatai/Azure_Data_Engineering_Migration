@@ -1,51 +1,136 @@
 🌐 Azure Data Engineering Migration Portfolio
+👋 Overview
 
-Welcome to my professional portfolio showcasing three flagship Azure data engineering projects. Each case study demonstrates how cloud-native solutions drive business impact through scalable architecture, automation, and insightful analytics.
+This portfolio showcases three flagship Azure Data Engineering projects demonstrating how cloud-native architectures enable scalable data ingestion, transformation, governance, and executive analytics.
 
-🚀 Project 1: Azure Data Platform
+Each case study reflects real-world enterprise scenarios, focusing on:
 
-Overview: End-to-end Azure solution for fleet and financial reporting.
+Cloud migration & modernization
 
-Problem: Fragmented on-prem SQL Server systems slowed reporting.
+Automated, scalable data pipelines
 
-Solution: Automated ingestion, transformation, and analytics-ready datasets in Azure; Power BI dashboards for executives.
+Analytics-ready datasets
 
-Impact: Reporting turnaround reduced from days to under 2 hours; fleet utilization improved 12%.
+Business-driven KPIs and measurable impact
 
-🔗 View Case Study🖼️ 📊 Fleet utilization improved to 85.6%, downtime reduced to 320 hours, and reporting turnaround dropped from 45 to <10 hours. Financial insights in ZAR enabled faster decisions across operations and finance.
+🏗️ Architecture Patterns Demonstrated
+
+On-prem SQL Server → Azure Cloud Migration
+
+Batch & Incremental Data Processing
+
+Lakehouse Architecture (Bronze / Silver / Gold)
+
+Power BI Semantic Modeling & Executive Dashboards
+
+Secure, governed Azure data platforms
+
+🚀 Project 1: Azure Data Platform for Fleet & Financial Reporting
+📌 Overview
+
+End-to-end Azure data platform built to consolidate fleet and financial data into a single analytics layer for executive reporting.
+
+❗ Business Problem
+
+Fragmented on-prem SQL Server databases
+
+Manual reporting processes
+
+Slow turnaround for operational and financial insights
+
+✅ Solution Architecture
+
+Ingestion: Azure Data Factory from on-prem SQL Server
+
+Storage: Azure Data Lake Gen2 (Raw / Curated / Analytics layers)
+
+Transformation: Azure Databricks (Python & SQL)
+
+Analytics: Azure Synapse + Power BI semantic model
+
+📊 Business Impact
+
+Fleet utilization increased to 85.6%
+
+Downtime reduced to 320 hours
+
+Reporting turnaround reduced from 45 hours to under 10 hours
+
+Financial KPIs standardized and reported in ZAR
+
+🔗 View Case Study (Architecture | Code | Dashboard)
 
 📊 Project 2: SQL Server → Power BI Modernization
+📌 Overview
 
-Overview: Modernization of legacy SQL Server reporting with cloud-native Azure services.
+Modernization of legacy SQL Server reporting into a scalable, self-service Azure analytics platform.
 
-Problem: Manual extracts, slow refresh cycles, limited scalability.
+❗ Business Problem
 
-Solution: Automated ADF pipelines, transformation in Databricks, Synapse datasets, Power BI dashboards.
+Manual Excel extracts
 
-Impact: Reporting latency reduced from hours to minutes; self-service analytics enabled.
+Slow refresh cycles
 
-🔗 View Case Study🖼️ 📊 Latency reduced to 12 hours, active users scaled to 550, and financial performance visualized in ZAR. Self-service analytics unlocked with department-level drilldowns and dynamic filters.
+Limited scalability and user access
+
+✅ Solution Architecture
+
+Ingestion: Azure Data Factory
+
+Transformation: Azure Databricks
+
+Analytics Layer: Azure Synapse
+
+Visualization: Power BI with certified datasets
+
+📊 Business Impact
+
+Reporting latency reduced from multiple days to ~12 hours
+
+Active Power BI users scaled to 550+
+
+Financial performance visualized in ZAR
+
+Department-level drilldowns enabled self-service analytics
+
+🔗 View Case Study (Pipelines | Data Model | Dashboards)
 
 ⚡ Project 3: Azure Incremental Data Pipeline (Streaming-Style)
+📌 Overview
 
-Overview: Watermark-based incremental ingestion for high-volume mobility data.
+Incremental ingestion pipeline designed for high-volume mobility data using watermark-based processing.
 
-Problem: Full dataset reloads delayed analytics and increased compute costs.
+❗ Business Problem
 
-Solution: Incremental ingestion with ADF, deduplication in Databricks, Synapse for analytics, Power BI dashboards.
+Full dataset reloads increased cost and latency
 
-Impact: Pipeline execution 70% faster; infrastructure costs reduced; near real-time insights enabled.
+Delayed insights for operational teams
 
-🔗 View Case Study🖼️ 📊 Pipeline execution time dropped 70%, monthly compute costs reduced in ZAR, and real-time mobility data visualized for operational agility.
+✅ Solution Architecture
 
-🛠️ Tech Stack Highlights
+Ingestion: ADF with watermark logic
 
-Data Ingestion: Azure Data Factory (ADF)
+Processing: Databricks (deduplication & incremental merges)
 
-Storage: Azure Data Lake Storage (ADLS)
+Analytics: Azure Synapse
 
-Transformation: Azure Databricks, Python, SQL
+Visualization: Power BI near real-time dashboards
 
-Analytics: Azure Synapse Analytics, Power BI
+📊 Business Impact
 
-Security & Governance: Azure AD, Key Vault
+Pipeline execution time reduced by 70%
+
+Monthly compute costs significantly reduced (ZAR)
+
+Near real-time operational visibility achieved
+
+🔗 View Case Study (Incremental Logic | Code | Monitoring)
+
+🛠️ Technology Stack
+Layer	Tools
+Ingestion	Azure Data Factory
+Storage	Azure Data Lake Gen2
+Processing	Azure Databricks (Python, SQL)
+Analytics	Azure Synapse Analytics
+Visualization	Power BI
+Security	Azure AD, Key Vault
