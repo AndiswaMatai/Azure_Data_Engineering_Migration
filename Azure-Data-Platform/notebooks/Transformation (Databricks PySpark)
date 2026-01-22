@@ -1,0 +1,8 @@
+# Deduplicate fleet data in Databricks
+from pyspark.sql import SparkSession
+
+spark = SparkSession.builder.getOrCreate()
+df = spark.read.parquet("abfss://fleet@datalake.dfs.core.windows.net/raw/fleet_data")
+
+deduped = df.dropDuplicates(["vehicle_id", "timestamp"])
+deduped.write.mode("overwrite").parquet("abfss://fleet@datalake.dfs.core.windows.net/curated/fleet_data")
