@@ -1,0 +1,14 @@
+flowchart LR
+    A[On-Prem SQL Server] -->|Self-Hosted IR| B[Azure Data Factory]
+    B --> C[ADLS Gen2 - Raw Zone]
+    C --> D[Azure Databricks]
+    D --> E[ADLS Gen2 - Curated Zone]
+    E --> F[Azure Synapse Analytics]
+    F --> G[Power BI Service]
+
+    H[Azure Key Vault] --> B
+    I[Azure AD / RBAC] --> G
+
+Architecture Pattern: Lakehouse (Bronze / Silver / Gold)
+Refresh: Daily incremental
+Currency: ZAR
