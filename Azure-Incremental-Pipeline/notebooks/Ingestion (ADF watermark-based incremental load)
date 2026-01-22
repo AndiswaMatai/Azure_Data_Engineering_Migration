@@ -1,0 +1,6 @@
+# Example parameterized pipeline run for incremental load
+run_response = client.pipelines.create_run(
+    rg_name, df_name, "IncrementalLoadPipeline",
+    parameters={"WatermarkValue": "2026-01-01T00:00:00Z"}
+)
+print(f"Incremental pipeline run ID: {run_response.run_id}")
