@@ -49,5 +49,3 @@ Transformation: Azure Databricks, Python, SQL
 Analytics: Azure Synapse Analytics, Power BI
 
 Security & Governance: Azure AD, Key Vault
-
-This portfolio demonstrates my ability to design, modernize, and optimize cloud-native data platforms with measurable business impact. Explore each case study and visual artifact to see how technical solutions translate into strategic outcomes.
