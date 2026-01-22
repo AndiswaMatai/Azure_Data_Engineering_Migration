@@ -1,30 +1,44 @@
-🏛 Project 2: SQL Server → Power BI Modernization
+🏛 Project 3: Azure Incremental Data Pipeline (Streaming-Style)
 Governance
 
-Data Ownership: Finance & Reporting teams
+Data Ownership: Mobility Operations & Business Analytics
 
-Data Classification: Internal reporting data
+Data Classification: Operational and near real-time mobility data
 
-Data Zones: Raw (staging) → Curated (cleaned & transformed) → Analytics (Power BI datasets)
+Data Zones: Raw → Curated → Analytics (near real-time dashboards)
 
-Dataset Certification: All Power BI datasets certified by data governance team
+Incremental Ingestion Logs: Maintained to track watermark values and processed records
 
-Data Lineage: Documented for ETL transformations, joins, and aggregations
+Data Lineage: Documented for all incremental and deduplication steps
 
 Security
 
-Identity & Access Management: Azure AD with RLS for Power BI dashboards
+Identity & Access Management: Azure AD RBAC for engineers and analysts
 
-Secret Management: Key Vault for SQL Server and Synapse credentials
+Secret Management: All pipeline credentials and connection strings stored in Key Vault
 
-Network Security: Private endpoints and firewall rules for Synapse SQL pools
+Network Security: Private endpoints, secure data transfer, VPN/ExpressRoute if required
 
-Data Encryption: Both in-transit and at-rest encryption enabled
+Data Encryption: At-rest and in-transit encryption enforced
 
-Monitoring & Alerts: Pipeline runs monitored via Azure Monitor; Power BI refresh failures tracked
+Monitoring & Alerts: Azure Monitor alerts for pipeline failures, incremental load errors, or anomalies
 
 Compliance
 
-Self-service analytics follows internal approval workflows for dataset certification
+Data access restricted based on operational roles
 
-Quarterly audits of dataset usage, refresh logs, and access permissions
+Routine checks on incremental load completeness and data quality
+
+Compliance with internal mobility data policies and regulatory standards
+
+📄 Shared Governance & Security Standards
+
+Periodic Reviews: Access, secrets, and compliance audits every quarter
+
+Logging: Centralized logs for all pipelines, transformations, and Power BI refreshes
+
+Incident Response: Standard operating procedure in place for data breaches or unauthorized access
+
+Documentation: All pipeline configurations, notebooks, and dashboards documented in GitHub
+
+Data Retention: Aligned with internal and regulatory requirements for retention and deletion
