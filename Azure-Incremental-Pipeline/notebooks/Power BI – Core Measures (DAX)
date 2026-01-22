@@ -1,0 +1,13 @@
+Fleet Utilization % =
+DIVIDE(
+    SUM(FactFleet[ActiveHours]),
+    SUM(FactFleet[AvailableHours])
+)
+
+
+Reporting Latency (Hours) =
+DATEDIFF(
+    MIN(FactFleet[SourceTimestamp]),
+    MAX(FactFleet[ReportTimestamp]),
+    HOUR
+)
