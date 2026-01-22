@@ -1,0 +1,5 @@
+MERGE INTO curated.mobility t
+USING staging.mobility s
+ON t.trip_id = s.trip_id
+WHEN MATCHED THEN UPDATE SET *
+WHEN NOT MATCHED THEN INSERT *
